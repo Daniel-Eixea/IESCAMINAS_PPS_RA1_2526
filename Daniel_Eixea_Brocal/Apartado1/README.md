@@ -11,7 +11,18 @@ En caso de estar en otro directorio usaremos:
 python Ruta/a/la/aplicación.py
 ````
 # Tests
-Para los test se ha utilizado ``pytest 9.0.2`` y para ejecutar los test utilizaremos:
+Para los test se ha utilizado ``pytest 9.0.2``.
+Si no tenemos la configuración simplemente buscamos la carpeta *``.vscode``*, si no esta la creamos, dentro de esa carpeta añadimos un **``settings.json``** (si no esta creado) y dentro de este añadimos la configuración:
+````
+{
+    "python.testing.pytestArgs": [
+        "Apartado1" //Ruta a la carpeta de tests
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
+````
+Para poder ejecutar los test utilizaremos:
 ````
 pytest
 ````
